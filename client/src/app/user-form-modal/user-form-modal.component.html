@@ -1,0 +1,50 @@
+<div id="userModal" data-backdrop="static" data-keyboard="false">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2 class="modal-title">Account Info</h2>
+          <button type="button" class="close" aria-label="Close" (click)="CloseModal ()"></button>
+        </div>
+        <div class="modal-body">
+          <form name="form" id="form">
+            <fieldset>
+              <legend>Fill in the information below:</legend>
+              <div class="form-group">
+                <label for="name" id="nameLabel">Name:</label><br>
+                <input type="text" class="form-control" [(ngModel)]="editUser.name" required name="name" id="name" placeholder="Please enter your full name"><br>
+              </div>
+              <div class="form-group">
+              <label for="email" id="emailLabel">Email:</label><br>
+              <input type="email" class="form-control" [(ngModel)]="editUser.email" required name="email" id="email" placeholder="What is your email address?"><br>
+              </div>
+              <div class="form-group">
+              <label for="age" id="ageLabel">Age:</label><br>
+              <input type="number" class="form-control" [(ngModel)]="editUser.age" required name="age" id="age" min="0" max="100" step="1" placeholder="How old are you?"><br>
+              </div>
+
+              <button type="button" class="btn btn-danger" style="margin-right: 15px;" (click)="CloseModal ()">Cancel</button>
+              <button type="button" class="btn btn-primary" name="submitButton" id="submitButton" (click)="Save ()">Finished</button>
+            </fieldset>
+          </form>
+        </div>
+        <div class="modal-footer">
+          <p class="small">Note: All user data will be held strictly confidential, and will not be disclosed to any third-parties.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="modal-header">
+    <h4 class="modal-title">Modal Title</h4>
+    <button type="button" class="close" aria-label="Close"
+     (click)="activeModal.dismiss('Cross click')">
+    </button>
+  </div>
+  <div class="modal-body">
+    <p>My modal content</p>
+  </div>
+  <div class="modal-footer">
+    <button (click)="activeModal.dismiss('Close clicked')">
+      Close Clicked
+    </button>
+  </div> -->
